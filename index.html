@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theming with CSS Variables</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-$END$
+<button id="themeToggle">Toggle Theme</button>
+
+<div class="card">
+    <h2>Card Title</h2>
+    <p>This is a card with content. It demonstrates theming using CSS variables.</p>
+    <button>Primary Button</button>
+    <button class="secondary">Secondary Button</button>
+</div>
+
+
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+    });
+</script>
 </body>
 </html>
